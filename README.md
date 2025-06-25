@@ -1,13 +1,15 @@
-# Enhanced Typing Speed Tester
+# Typing Speed Tester (Custom Input Version)
 
-A Python-based GUI application to test your typing speed and accuracy.  
-It features a countdown timer, calculates **WPM (Words Per Minute)** and **Accuracy**, and uses a clean Tkinter interface.
+This is a Python-based GUI application that lets users measure their typing speed and accuracy using their own custom input text. Built with Tkinter, the app provides a simple interface where users can input any paragraph, type it, and get real-time feedback on performance.
+
 
 
 # Features
 
--  Built-in timer
--  Real-time calculation of WPM
--  Accuracy percentage
--  Simple and interactive GUI using Tkinter
-- Sample paragraph auto-displayed for typing test
+- Enter your own paragraph for testing
+- Real-time timer updates
+- Calculates:
+  - Words Per Minute (WPM)
+  - Accuracy percentage
+- Simple and clean user interface
+- Option to restart the test anytime
