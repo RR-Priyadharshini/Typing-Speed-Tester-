@@ -8,6 +8,7 @@ class TypingSpeedTester:
         self.master.geometry("600x400")
         self.text = ""
         self.start_time = None
+        self.timer_running = False  # ⏱️ Timer control flag
 
         self.setup_input_window()
 
@@ -61,9 +62,10 @@ class TypingSpeedTester:
     def start_typing(self, event):
         if self.start_time is None:
             self.start_time = time()
+            self.timer_running = True  # ✅ Start timer
 
     def update_timer(self):
-        if self.start_time:
+        if self.timer_running and self.start_time:
             elapsed = time() - self.start_time
             self.timer_label.config(text=f"Time: {elapsed:.1f}s")
         self.master.after(100, self.update_timer)
@@ -73,6 +75,8 @@ class TypingSpeedTester:
         if not typed:
             self.result_label.config(text="Please type something first.")
             return
+
+        self.timer_running = False  # ⛔ Stop timer
 
         end_time = time()
         time_taken = end_time - self.start_time
